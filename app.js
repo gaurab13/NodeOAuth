@@ -33,7 +33,7 @@ app.use('/auth', authRoutes);
 app.use('/profile', profileRoutes);
 //create home route
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', {user: req.user});
 })
 app.listen(3001, () => {
     console.log('App listening at 3001');
